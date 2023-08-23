@@ -19,7 +19,7 @@ class Autoload {
         $className = substr( $className, strlen( $this->prefix ) );
         $className = str_replace( '\\', DIRECTORY_SEPARATOR, $className );
 
-        if ( preg_match( '/([^\\\\]+)$/', $className, $matches ) ) {
+        if ( preg_match( '/[^\\\\]+$/', $className, $matches ) ) {
             $dirname = rtrim( $className, $matches[0] );
         }
 
